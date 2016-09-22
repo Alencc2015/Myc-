@@ -191,6 +191,7 @@
             this.gridColumn25 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn26 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn27 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.labelX26 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel2.SuspendLayout();
@@ -226,8 +227,8 @@
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
-            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControl1.Location = new System.Drawing.Point(0, 0);
             this.superTabControl1.Name = "superTabControl1";
@@ -1091,6 +1092,7 @@
             // 
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx1.Controls.Add(this.labelX26);
             this.panelEx1.Controls.Add(this.labelX20);
             this.panelEx1.Controls.Add(this.tbmodno);
             this.panelEx1.Controls.Add(this.tbgoodid);
@@ -1176,10 +1178,10 @@
             this.labelX20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelX20.Font = new System.Drawing.Font("宋体", 18F);
             this.labelX20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelX20.Location = new System.Drawing.Point(368, 259);
+            this.labelX20.Location = new System.Drawing.Point(312, 259);
             this.labelX20.Margin = new System.Windows.Forms.Padding(5);
             this.labelX20.Name = "labelX20";
-            this.labelX20.Size = new System.Drawing.Size(80, 30);
+            this.labelX20.Size = new System.Drawing.Size(67, 30);
             this.labelX20.TabIndex = 128;
             this.labelX20.Tag = "DE";
             this.labelX20.Text = "B等";
@@ -1571,7 +1573,7 @@
             this.DF.Location = new System.Drawing.Point(548, 259);
             this.DF.Margin = new System.Windows.Forms.Padding(5);
             this.DF.Name = "DF";
-            this.DF.Size = new System.Drawing.Size(80, 30);
+            this.DF.Size = new System.Drawing.Size(67, 30);
             this.DF.TabIndex = 105;
             this.DF.Tag = "DG";
             this.DF.Text = "废品";
@@ -1589,10 +1591,10 @@
             this.DE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DE.Font = new System.Drawing.Font("宋体", 18F);
             this.DE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DE.Location = new System.Drawing.Point(458, 259);
+            this.DE.Location = new System.Drawing.Point(472, 259);
             this.DE.Margin = new System.Windows.Forms.Padding(5);
             this.DE.Name = "DE";
-            this.DE.Size = new System.Drawing.Size(80, 30);
+            this.DE.Size = new System.Drawing.Size(67, 30);
             this.DE.TabIndex = 104;
             this.DE.Tag = "DF";
             this.DE.Text = "补釉";
@@ -1610,10 +1612,10 @@
             this.DD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DD.Font = new System.Drawing.Font("宋体", 18F);
             this.DD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DD.Location = new System.Drawing.Point(278, 259);
+            this.DD.Location = new System.Drawing.Point(236, 259);
             this.DD.Margin = new System.Windows.Forms.Padding(5);
             this.DD.Name = "DD";
-            this.DD.Size = new System.Drawing.Size(80, 30);
+            this.DD.Size = new System.Drawing.Size(67, 30);
             this.DD.TabIndex = 103;
             this.DD.Tag = "DD";
             this.DD.Text = "B甲";
@@ -1631,10 +1633,10 @@
             this.DC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DC.Font = new System.Drawing.Font("宋体", 18F);
             this.DC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DC.Location = new System.Drawing.Point(188, 259);
+            this.DC.Location = new System.Drawing.Point(160, 259);
             this.DC.Margin = new System.Windows.Forms.Padding(5);
             this.DC.Name = "DC";
-            this.DC.Size = new System.Drawing.Size(80, 30);
+            this.DC.Size = new System.Drawing.Size(67, 30);
             this.DC.TabIndex = 102;
             this.DC.Tag = "DC";
             this.DC.Text = "CA等";
@@ -1652,10 +1654,10 @@
             this.DB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DB.Font = new System.Drawing.Font("宋体", 18F);
             this.DB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DB.Location = new System.Drawing.Point(98, 259);
+            this.DB.Location = new System.Drawing.Point(84, 259);
             this.DB.Margin = new System.Windows.Forms.Padding(5);
             this.DB.Name = "DB";
-            this.DB.Size = new System.Drawing.Size(80, 30);
+            this.DB.Size = new System.Drawing.Size(67, 30);
             this.DB.TabIndex = 101;
             this.DB.Tag = "DB";
             this.DB.Text = "A等";
@@ -1676,7 +1678,7 @@
             this.DA.Location = new System.Drawing.Point(8, 259);
             this.DA.Margin = new System.Windows.Forms.Padding(5);
             this.DA.Name = "DA";
-            this.DA.Size = new System.Drawing.Size(80, 30);
+            this.DA.Size = new System.Drawing.Size(67, 30);
             this.DA.TabIndex = 100;
             this.DA.Tag = "DA";
             this.DA.Text = "A+";
@@ -2925,6 +2927,26 @@
             this.gridColumn27.HeaderText = "总数";
             this.gridColumn27.Name = "sumQty";
             // 
+            // labelX26
+            // 
+            this.labelX26.BackColor = System.Drawing.Color.LightYellow;
+            // 
+            // 
+            // 
+            this.labelX26.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX26.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelX26.Font = new System.Drawing.Font("宋体", 18F);
+            this.labelX26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelX26.Location = new System.Drawing.Point(388, 259);
+            this.labelX26.Margin = new System.Windows.Forms.Padding(5);
+            this.labelX26.Name = "labelX26";
+            this.labelX26.Size = new System.Drawing.Size(67, 30);
+            this.labelX26.TabIndex = 129;
+            this.labelX26.Tag = "DE";
+            this.labelX26.Text = "C等";
+            this.labelX26.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.labelX26.TextLineAlignment = System.Drawing.StringAlignment.Far;
+            // 
             // frmSelPorcelain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -3124,5 +3146,6 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbcolor;
         private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn30;
         private DevComponents.DotNetBar.ButtonX btnDel;
+        private DevComponents.DotNetBar.LabelX labelX26;
     }
 }
