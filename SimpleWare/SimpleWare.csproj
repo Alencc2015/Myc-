@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{968667F3-6375-467E-A841-5CED2BB91280}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimpleWare</RootNamespace>
+    <AssemblyName>SimpleWare</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>4.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\DevComponents.DotNetBar.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=12.0.0.1, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ADOX">
+      <HintPath>..\packages\PDF.NET.5.5.3.0412\lib\Interop.ADOX.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>Library\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="NPOI">
+      <HintPath>Library\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>Library\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>Library\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>Library\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseClass\AutoSizeFormClass.cs" />
+    <Compile Include="BaseClass\ConvertHelper.cs" />
+    <Compile Include="BaseClass\ExcelHelper.cs" />
+    <Compile Include="BaseClass\FileDialogHelper.cs" />
+    <Compile Include="BaseClass\FileUtil.cs" />
+    <Compile Include="BaseClass\FormAutoSizeClass.cs" />
+    <Compile Include="BaseClass\Log.cs" />
+    <Compile Include="BaseClass\LogHelper.cs" />
+    <Compile Include="BaseClass\Marquee.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseClass\MessageUtil.cs" />
+    <Compile Include="BaseClass\MyGridComboxControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseClass\MyGridTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseClass\NpoiExcelHelper.cs" />
+    <Compile Include="BaseClass\WindowsUtil.cs" />
+    <Compile Include="BaseClass\XmlConvertor.cs" />
+    <Compile Include="ClassInfo\BaseGroup.cs" />
+    <Compile Include="ClassInfo\BaseGroupMenu.cs" />
+    <Compile Include="ClassInfo\BaseGroupUser.cs" />
+    <Compile Include="ClassInfo\BaseMenu.cs" />
+    <Compile Include="ClassInfo\BaseModule.cs" />
+    <Compile Include="ClassInfo\curControl.cs" />
+    <Compile Include="ClassInfo\tb_SelPorcelain.cs" />
+    <Compile Include="ClassInfo\tb_Base.cs" />
+    <Compile Include="ClassInfo\tb_ColorInfo.cs" />
+    <Compile Include="ClassInfo\tb_EmpInfo.cs" />
+    <Compile Include="ClassInfo\tb_GoodsInfo.cs" />
+    <Compile Include="ClassInfo\tb_JCH.cs" />
+    <Compile Include="ClassInfo\tb_ModelInfo.cs" />
+    <Compile Include="ClassInfo\tb_settings.cs" />
+    <Compile Include="ClassInfo\tb_SpGoodsInfo.cs" />
+    <Compile Include="ClassInfo\tb_WareHouse.cs" />
+    <Compile Include="ClassInfo\tb_WorkNum.cs" />
+    <Compile Include="ClassInfo\WareInOut.cs" />
+    <Compile Include="DbMethod\BaseGroupMenuMethod.cs" />
+    <Compile Include="DbMethod\BaseGroupMethod.cs" />
+    <Compile Include="DbMethod\BaseMenuMethod.cs" />
+    <Compile Include="DbMethod\BaseModuleMethod.cs" />
+    <Compile Include="DbMethod\ChildWinManagement.cs" />
+    <Compile Include="DbMethod\Dblink.cs" />
+    <Compile Include="DbMethod\Dbconnection.cs" />
+    <Compile Include="DbMethod\SelPorcelainMethod.cs" />
+    <Compile Include="DbMethod\tb_BaseMgr.cs" />
+    <Compile Include="DbMethod\tb_ColorInfoMethod.cs" />
+    <Compile Include="DbMethod\tb_GoodsInfoMethods.cs" />
+    <Compile Include="DbMethod\tb_JCHMethod.cs" />
+    <Compile Include="DbMethod\tb_EmpInfoMethod.cs" />
+    <Compile Include="DbMethod\tb_ModelInfoMethod.cs" />
+    <Compile Include="DbMethod\tb_SettingsMethod.cs" />
+    <Compile Include="DbMethod\tb_SpGoodInfoMethod.cs" />
+    <Compile Include="DbMethod\tb_WareHouseMethod.cs" />
+    <Compile Include="DbMethod\tb_WorkNumMethod.cs" />
+    <Compile Include="DbMethod\WareInOutDbMgr.cs" />
+    <Compile Include="frmBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseInfo.Designer.cs">
+      <DependentUpon>frmBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarDetail.Designer.cs">
+      <DependentUpon>frmCarDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRpttest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRpttest.Designer.cs">
+      <DependentUpon>frmRpttest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsViewForm\frmGood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsViewForm\frmGood.Designer.cs">
+      <DependentUpon>frmGood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsViewForm\frmGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsViewForm\frmGoods.Designer.cs">
+      <DependentUpon>frmGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJCH.Designer.cs">
+      <DependentUpon>frmJCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJCHIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJCHIn.Designer.cs">
+      <DependentUpon>frmJCHIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJCHEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJCHEx.Designer.cs">
+      <DependentUpon>frmJCHEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin1.Designer.cs">
+      <DependentUpon>frmLogin1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoleSecurity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoleSecurity.Designer.cs">
+      <DependentUpon>frmRoleSecurity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmBaseMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmBaseMenu.Designer.cs">
+      <DependentUpon>frmBaseMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmEmpMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmEmpMenu.Designer.cs">
+      <DependentUpon>frmEmpMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmUserGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmUserGroups.Designer.cs">
+      <DependentUpon>frmUserGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelPorcelainForms\frmColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelPorcelainForms\frmColor.Designer.cs">
+      <DependentUpon>frmColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelPorcelainForms\frmModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelPorcelainForms\frmModel.Designer.cs">
+      <DependentUpon>frmModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelPorcelainForms\frmSelpainSumRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelPorcelainForms\frmSelpainSumRpt.Designer.cs">
+      <DependentUpon>frmSelpainSumRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelPorcelainForms\frmSelPorcelain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelPorcelainForms\frmSelPorcelain.Designer.cs">
+      <DependentUpon>frmSelPorcelain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWareDayDetailRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWareDayDetailRpt.Designer.cs">
+      <DependentUpon>frmWareDayDetailRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWareDayRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWareDayRpt.Designer.cs">
+      <DependentUpon>frmWareDayRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWareHouse.Designer.cs">
+      <DependentUpon>frmWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWareIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWareIn.Designer.cs">
+      <DependentUpon>frmWareIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWareOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWareOut.Designer.cs">
+      <DependentUpon>frmWareOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsViewForm\frmSpGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsViewForm\frmSpGoods.Designer.cs">
+      <DependentUpon>frmSpGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaperControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaperControl.Designer.cs">
+      <DependentUpon>PaperControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelPorcelainForms\frmZLFXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelPorcelainForms\frmZLFXB.Designer.cs">
+      <DependentUpon>frmZLFXB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleWareDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SimpleWareDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Toolbar.Designer.cs">
+      <DependentUpon>Toolbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VKeyBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VKeyBoard.Designer.cs">
+      <DependentUpon>VKeyBoard.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmBaseInfo.resx">
+      <DependentUpon>frmBaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarDetail.resx">
+      <DependentUpon>frmCarDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRpttest.resx">
+      <DependentUpon>frmRpttest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsViewForm\frmGood.resx">
+      <DependentUpon>frmGood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsViewForm\frmGoods.resx">
+      <DependentUpon>frmGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJCH.resx">
+      <DependentUpon>frmJCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJCHIn.resx">
+      <DependentUpon>frmJCHIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJCHEx.resx">
+      <DependentUpon>frmJCHEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin1.resx">
+      <DependentUpon>frmLogin1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoleSecurity.resx">
+      <DependentUpon>frmRoleSecurity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmBaseMenu.resx">
+      <DependentUpon>frmBaseMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmEmpMenu.resx">
+      <DependentUpon>frmEmpMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmUserGroups.resx">
+      <DependentUpon>frmUserGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelPorcelainForms\frmColor.resx">
+      <DependentUpon>frmColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelPorcelainForms\frmModel.resx">
+      <DependentUpon>frmModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelPorcelainForms\frmSelpainSumRpt.resx">
+      <DependentUpon>frmSelpainSumRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelPorcelainForms\frmSelPorcelain.resx">
+      <DependentUpon>frmSelPorcelain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWareDayDetailRpt.resx">
+      <DependentUpon>frmWareDayDetailRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWareDayRpt.resx">
+      <DependentUpon>frmWareDayRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWareHouse.resx">
+      <DependentUpon>frmWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWareIn.resx">
+      <DependentUpon>frmWareIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWareOut.resx">
+      <DependentUpon>frmWareOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsViewForm\frmSpGoods.resx">
+      <DependentUpon>frmSpGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelPorcelainForms\frmZLFXB.resx">
+      <DependentUpon>frmZLFXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toolbar.resx">
+      <DependentUpon>Toolbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VKeyBoard.resx">
+      <DependentUpon>VKeyBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\SimpleWare.ClassInfo.tb_SelPorcelain.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SimpleWareDataSet.xsc">
+      <DependentUpon>SimpleWareDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SimpleWareDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SimpleWareDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SimpleWareDataSet.xss">
+      <DependentUpon>SimpleWareDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="update.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\帮助.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\保存.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\更改密码.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\关闭子窗口3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\关于.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\键盘1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\警告.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\切换用户.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除%28小%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除%28小%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除%28小%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除%28小%2911.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\时钟.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\时钟1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\时钟2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\添加%28小%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\添加2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\退出2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\退出系统1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\用户设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\主页1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\最小化.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="4.ico" />
+    <None Include="Resources\package_editors.png" />
+    <None Include="Resources\kcalc.png" />
+    <None Include="Resources\kaddressbook.png" />
+    <None Include="Resources\圆角2.jpg" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\key_7.png" />
+    <None Include="Resources\kedit.png" />
+    <None Include="Resources\lorry_add.png" />
+    <None Include="Resources\圆角1.jpg" />
+    <None Include="Resources\圆角背景1.jpg" />
+    <None Include="Resources\登录背景.png" />
+    <None Include="Resources\text_list_bullets.png" />
+    <None Include="Resources\to_do_list.png" />
+    <None Include="Resources\背景1.png" />
+    <None Include="Resources\zoom_layer.png" />
+    <None Include="Resources\背景.png" />
+    <None Include="Resources\Word.png" />
+    <None Include="Resources\News.png" />
+    <None Include="Resources\Mail_compose.png" />
+    <None Include="Resources\Mail_forward.png" />
+    <None Include="Resources\Mail_reply.png" />
+    <None Include="Resources\Mail_new.png" />
+    <None Include="Resources\Mail_open.png" />
+    <None Include="Resources\Mails.png" />
+    <None Include="Resources\Mail_add.png" />
+    <None Include="Resources\Mail_verified.png" />
+    <None Include="Resources\Mail_syncronized.png" />
+    <None Include="Resources\Mail_delete.png" />
+    <None Include="Resources\Mail_remove.png" />
+    <None Include="Resources\Mail_spam.png" />
+    <None Include="Resources\Monitor.png" />
+    <None Include="Resources\Star_half.png" />
+    <None Include="Resources\Star.png" />
+    <None Include="Resources\Twitter.png" />
+    <None Include="Resources\Mixx.png" />
+    <None Include="Resources\RSS.png" />
+    <None Include="Resources\StumbleUpon.png" />
+    <None Include="Resources\Yahoo.png" />
+    <None Include="Resources\Technorati.png" />
+    <None Include="Resources\Info.png" />
+    <None Include="Resources\search_32.png" />
+    <None Include="Resources\save_as.png" />
+    <None Include="Resources\reseller_programm.png" />
+    <None Include="Resources\msn_messenger.png" />
+    <None Include="Resources\keyboard_magnify.png" />
+    <None Include="Resources\addressbook.png" />
+    <None Include="Resources\Clipboard_1.png" />
+    <None Include="Resources\Clipboard_2.png" />
+    <None Include="Resources\Clipboard_3.png" />
+    <None Include="Resources\Clipboard_edit.png" />
+    <None Include="Resources\Help.png" />
+    <None Include="Resources\Box_download.png" />
+    <None Include="Resources\Box_recycle.png" />
+    <None Include="Resources\Box_content.png" />
+    <None Include="Resources\Box_love.png" />
+    <None Include="Resources\Box_present.png" />
+    <None Include="Resources\Box.png" />
+    <None Include="Resources\Css_Globe.png" />
+    <None Include="Resources\DesignFloat.png" />
+    <None Include="Resources\Flickr.png" />
+    <None Include="Resources\Facebook.png" />
+    <None Include="Resources\Digg.png" />
+    <None Include="Resources\Delicious.png" />
+    <None Include="Resources\Globe.png" />
+    <None Include="Resources\Calendar.png" />
+    <None Include="Resources\Glass.png" />
+    <None Include="Resources\Comments.png" />
+    <None Include="Resources\Comment_edit.png" />
+    <None Include="Resources\Comment_remove.png" />
+    <None Include="Resources\Comment_delete.png" />
+    <None Include="Resources\Comment_add.png" />
+    <None Include="Resources\Comment.png" />
+    <None Include="Resources\Book.png" />
+    <None Include="Resources\Book_address.png" />
+    <None Include="Resources\Bookmark.png" />
+    <None Include="Resources\Book_phones.png" />
+    <None Include="Resources\Book_edit.png" />
+    <None Include="Resources\Books.png" />
+    <None Include="Resources\Briefcase_files.png" />
+    <None Include="Resources\Briefcase.png" />
+    <None Include="Resources\Folder_verified.png" />
+    <None Include="Resources\Folder_protected.png" />
+    <None Include="Resources\Folder_syncronize.png" />
+    <None Include="Resources\Folder_add.png" />
+    <None Include="Resources\Email_warning.png" />
+    <None Include="Resources\Email.png" />
+    <None Include="Resources\Folder_empty.png" />
+    <None Include="Resources\Folder.png" />
+    <None Include="Resources\Folder_delete.png" />
+    <None Include="Resources\Folder_remove.png" />
+    <None Include="Resources\Adobe_Flex.png" />
+    <None Include="Resources\Adobe_Dreamweaver.png" />
+    <None Include="Resources\Adobe_Bridge.png" />
+    <None Include="Resources\Adobe_Illustrator.png" />
+    <None Include="Resources\Adobe_InDesign.png" />
+    <None Include="Resources\Adobe_Fireworks.png" />
+    <None Include="Resources\Adobe_Photoshop.png" />
+    <None Include="Resources\Adobe_Flash.png" />
+    <None Include="Resources\Chart_5.png" />
+    <None Include="Resources\Chart_4.png" />
+    <None Include="Resources\Chart_3.png" />
+    <None Include="Resources\Chart_2.png" />
+    <None Include="Resources\Chart_1.png" />
+    <None Include="Resources\File_edit.png" />
+    <None Include="Resources\File.png" />
+    <None Include="Resources\File_font.png" />
+    <None Include="Resources\File_Pdf.png" />
+    <None Include="Resources\File_Excel.png" />
+    <None Include="Resources\File_PowerPoint.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\database_add.png" />
+    <None Include="Resources\google_custom_search.png" />
+    <None Include="Resources\coins_add.png" />
+    <None Include="Resources\Cryo64-Corinthia-Lite_14.png" />
+    <None Include="Resources\Cryo64-Corinthia-Lite_03.png" />
+    <None Include="Resources\demo.png" />
+    <None Include="Resources\demo1.png" />
+    <None Include="Resources\64\34.png" />
+    <None Include="Resources\64\04.png" />
+    <None Include="Resources\64\14.png" />
+    <None Include="Resources\64\16.png" />
+    <None Include="Resources\64\41.png" />
+    <None Include="Resources\64\03.png" />
+    <None Include="Resources\16\File_Excel 16x16.png" />
+    <Content Include="Resources\ie4.0buf.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoUpdate\AutoUpdate.csproj">
+      <Project>{c7fe159e-6722-4044-b46f-8848a13f0f40}</Project>
+      <Name>AutoUpdate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Library\" />
+    <Folder Include="Resources\Icon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSDATASRC">
+      <Guid>{7C0FFAB0-CD84-11D0-949A-00A0C91110ED}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
