@@ -67,7 +67,9 @@
             this.ajBJRate = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.ajBqty = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn6 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn16 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn7 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn17 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn8 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn9 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn10 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -539,6 +541,8 @@
             this.rptGrid.PrimaryGrid.Columns.Add(this.ajBJRate);
             this.rptGrid.PrimaryGrid.Columns.Add(this.ajBqty);
             this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn6);
+            this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn16);
+            this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn17);
             this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn7);
             this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn8);
             this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn9);
@@ -676,6 +680,14 @@
             this.gridColumn6.HeaderText = "%";
             this.gridColumn6.Name = "ajBRate";
             // 
+            // gridColumn16
+            // 
+            this.gridColumn16.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn16.DataPropertyName = "ajCqty";
+            this.gridColumn16.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn16.HeaderText = "件数";
+            this.gridColumn16.Name = "ajCqty";
+            // 
             // gridColumn7
             // 
             this.gridColumn7.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleRight;
@@ -685,6 +697,14 @@
             this.gridColumn7.HeaderText = "件数";
             this.gridColumn7.Name = "ajCAqty";
             this.gridColumn7.Width = 80;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn17.DataPropertyName = "ajCRate";
+            this.gridColumn17.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn17.HeaderText = "%";
+            this.gridColumn17.Name = "ajCRate";
             // 
             // gridColumn8
             // 
@@ -810,5 +830,7 @@
         private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn15;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbOpr;
         private DevComponents.DotNetBar.LabelX lblOpr;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn16;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn17;
     }
 }

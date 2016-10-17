@@ -187,9 +187,10 @@ namespace SimpleWare.SelPorcelainForms
 
             panel.ColumnHeader.GroupHeaders.Add(GetQtyInfoHeader("ajAqty", "A+", columns));
             panel.ColumnHeader.GroupHeaders.Add(GetQtyInfoHeader("ajAdqty", "A等", columns));
+            panel.ColumnHeader.GroupHeaders.Add(GetQtyInfoHeader("ajCAqty", "CA等", columns));
             panel.ColumnHeader.GroupHeaders.Add(GetQtyInfoHeader("ajBJqty", "B甲", columns));
             panel.ColumnHeader.GroupHeaders.Add(GetQtyInfoHeader("ajBqty", "B等", columns));
-            panel.ColumnHeader.GroupHeaders.Add(GetQtyInfoHeader("ajCAqty", "CA等", columns));
+            panel.ColumnHeader.GroupHeaders.Add(GetQtyInfoHeader("ajCqty", "C等", columns));
             panel.ColumnHeader.GroupHeaders.Add(GetQtyInfoHeader("ajBUqty", "补釉", columns));
             panel.ColumnHeader.GroupHeaders.Add(GetQtyInfoHeader("ajFPqty", "废品", columns));
             //setColumnWidth(columns,"");
@@ -354,9 +355,10 @@ namespace SimpleWare.SelPorcelainForms
                     NpoiExcelHelper.setMergedRegion(sheet, row, 10, "CA等", 0, 0, 10, 11);
                     NpoiExcelHelper.setMergedRegion(sheet, row, 12, "B甲", 0, 0, 12, 13);
                     NpoiExcelHelper.setMergedRegion(sheet, row, 14, "B等", 0, 0, 14, 15);
-                    NpoiExcelHelper.setMergedRegion(sheet, row, 16, "补釉", 0, 0, 16, 17);
-                    NpoiExcelHelper.setMergedRegion(sheet, row, 18, "废品", 0, 0, 18, 19);
-                    NpoiExcelHelper.setMergedRegion(sheet, row, 20, "总数", 0, 1, 20, 21);
+                    NpoiExcelHelper.setMergedRegion(sheet, row, 16, "C等", 0, 0, 16, 17);
+                    NpoiExcelHelper.setMergedRegion(sheet, row, 18, "补釉", 0, 0, 18, 19);
+                    NpoiExcelHelper.setMergedRegion(sheet, row, 20, "废品", 0, 0, 20, 21);
+                    NpoiExcelHelper.setMergedRegion(sheet, row, 22, "总数", 0, 1, 22, 23);
 
                     IRow row2 = sheet.CreateRow(1);
                     NpoiExcelHelper.setQtyAndRate(row2, 4, 18,isNeedRate);
