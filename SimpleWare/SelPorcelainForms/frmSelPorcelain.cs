@@ -621,6 +621,7 @@ namespace SimpleWare
                 int qtyBJ = 0;
                 int qtyBu = 0;
                 int qtyFp = 0;
+                int qtyC = 0;
                 for (int i = 0; i <= ds.Tables[0].Rows.Count - 1; i++)
                 {
                     zysl += Convert.ToInt32(Convert.ToInt32(ds.Tables[0].Rows[i]["PlQty"].ToString()));
@@ -634,6 +635,8 @@ namespace SimpleWare
                         qtyBJ += Convert.ToInt32(Convert.ToInt32(ds.Tables[0].Rows[i]["PlQty"].ToString()));
                     if (ds.Tables[0].Rows[i]["PlLevels"].ToString() == "B等")
                         qtyB += Convert.ToInt32(Convert.ToInt32(ds.Tables[0].Rows[i]["PlQty"].ToString()));
+                    if (ds.Tables[0].Rows[i]["PlLevels"].ToString() == "C等")
+                        qtyC += Convert.ToInt32(Convert.ToInt32(ds.Tables[0].Rows[i]["PlQty"].ToString()));
                     if (ds.Tables[0].Rows[i]["PlLevels"].ToString() == "补釉")
                         qtyBu += Convert.ToInt32(Convert.ToInt32(ds.Tables[0].Rows[i]["PlQty"].ToString()));
                     if (ds.Tables[0].Rows[i]["PlLevels"].ToString() == "废品")
@@ -647,6 +650,7 @@ namespace SimpleWare
                 lblCa.Text = String.Format("{0} ", qtyCa);//CA： {1}
                 lblBJ.Text = String.Format("{0} ", qtyBJ);//B甲： {1}
                 lblB.Text = String.Format("{0} ", qtyB);//B： {1}
+                lblC.Text = String.Format("{0} ", qtyC);//B： {1}
                 lblBu.Text = String.Format("{0} ", qtyBu);//补釉： {1}
                 lblFp.Text = String.Format("{0} ", qtyFp);//废品： {1}
 
