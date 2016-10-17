@@ -134,7 +134,11 @@ namespace SimpleWare
                         frmMain fm = new frmMain();
                         fm.Show();
                         string ip = WindowsUtil.IP();
-                        LogHelper.WriteLog(userName+" "+userCode+" 于 "+ip+" 登录系统");
+                        //LogHelper.WriteLog(userName+" "+userCode+" 于 "+ip+" 登录系统");
+                        //Msg msg = new Msg(DateTime.Now, userName + " " + userCode + " 于 " + ip + " 登录系统", MsgType.Information);
+                        Log log = new Log();
+                        log.Write(DateTime.Now, userName + " " + userCode + " 于 " + ip + " 登录系统", MsgType.Information);
+
                     }
                     else
                     {
