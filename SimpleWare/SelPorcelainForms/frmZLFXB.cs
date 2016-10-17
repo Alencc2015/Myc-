@@ -271,12 +271,46 @@ namespace SimpleWare.SelPorcelainForms
             panel.ColumnHeader.GroupHeaders.Add(GetLevelHeader(columns));//A等品
 
             panel.ColumnHeader.GroupHeaders.Add(GetLevelBHeader(columns));//B等品
+            //panel.ColumnHeader.GroupHeaders.Add(GetLevelCHeader(columns));//C等品
+            panel.ColumnHeader.GroupHeaders.Add(GetHeader(columns, "C等品", GetDisplayIndex(columns, "CQty"), GetDisplayIndex(columns, "CRate"), Color.LightYellow));
             panel.ColumnHeader.GroupHeaders.Add(GetHeader(columns, "补釉", GetDisplayIndex(columns, "BUQty"), GetDisplayIndex(columns, "BURate"), Color.LightYellow));
             panel.ColumnHeader.GroupHeaders.Add(GetHeader(columns, "废品", GetDisplayIndex(columns, "FPQty"), GetDisplayIndex(columns, "FPRate"), Color.LightYellow));
             panel.ColumnHeader.GroupHeaders.Add(GetHeader(columns, "小计", GetDisplayIndex(columns, "sumQty1"), GetDisplayIndex(columns, "sumRate1"), Color.LightYellow));
             panel.ColumnHeader.GroupHeaders.Add(GetModelHeader(columns));//成型缺陷
             panel.ColumnHeader.GroupHeaders.Add(GetGlazeHeader(columns));//釉彩缺陷
             panel.ColumnHeader.GroupHeaders.Add(GetFireHeader(columns));//看火缺陷
+        }
+
+        private ColumnGroupHeader GetLevelCHeader(GridColumnCollection columns)
+        {
+            ColumnGroupHeader cgh = new ColumnGroupHeader();
+
+            cgh.Name = "LevelC";
+            cgh.MinRowHeight = 28;
+
+            // Enable MiniMarkup and set the header text as needed
+
+            cgh.EnableHeaderMarkup = true;
+
+            cgh.HeaderText = "<div align=\"center\"><font size=\"12\">C等品</font> </div>";
+
+            cgh.HeaderStyles.MouseOver.Background = new Background(Color.Yellow);
+            cgh.HeaderStyles.Default.Background = new Background(Color.LightYellow);
+            // Create and add the subordinate group headers
+
+            //ColumnGroupHeader cshPop = GetHeader(columns, "B甲", GetDisplayIndex(columns, "BJQty"), GetDisplayIndex(columns, "BJRate"), Color.LightYellow);
+            ColumnGroupHeader cshB = GetHeader(columns, "C等", GetDisplayIndex(columns, "CQty"), GetDisplayIndex(columns, "CRate"), Color.LightYellow);
+
+
+            cgh.GroupHeaders.Add(cshB);
+            //cgh.GroupHeaders.Add(cshPop);
+
+            // We want the header to also contain the 'City' column
+            // so we must include it in the display range.
+
+            cgh.StartDisplayIndex = GetDisplayIndex(columns, "CQty");
+            cgh.EndDisplayIndex = GetDisplayIndex(columns, "CRate");
+            return (cgh);
         }
 
         private ColumnGroupHeader GetFireHeader(GridColumnCollection columns)
@@ -619,13 +653,14 @@ namespace SimpleWare.SelPorcelainForms
                     NpoiExcelHelper.setMergedRegion(sheet, row, 9, "A等品", 0, 0, 9, 12);
 
                     NpoiExcelHelper.setMergedRegion(sheet, row, 13, "B等品", 0, 0, 13, 16);
-                    NpoiExcelHelper.setMergedRegion(sheet, row, 17, "补釉", 0, 1, 17, 18);
-                    NpoiExcelHelper.setMergedRegion(sheet, row, 19, "废品", 0, 1, 19, 20);
-                    NpoiExcelHelper.setMergedRegion(sheet, row, 21, "小计", 0, 1, 21, 22);
+                    NpoiExcelHelper.setMergedRegion(sheet, row, 17, "C等品", 0, 1, 17, 18);
+                    NpoiExcelHelper.setMergedRegion(sheet, row, 19, "补釉", 0, 1, 19, 20);
+                    NpoiExcelHelper.setMergedRegion(sheet, row, 21, "废品", 0, 1, 21, 22);
+                    NpoiExcelHelper.setMergedRegion(sheet, row, 23, "小计", 0, 1, 23, 24);
 
-                    NpoiExcelHelper.setMergedRegion(sheet, row, 23, "成型缺陷", 0, 0, 23, 48);
-                    NpoiExcelHelper.setMergedRegion(sheet, row, 49, "釉彩缺陷", 0, 0, 49, 76);
-                    NpoiExcelHelper.setMergedRegion(sheet, row, 77, "看火缺陷", 0, 0, 77, 87);
+                    NpoiExcelHelper.setMergedRegion(sheet, row, 25, "成型缺陷", 0, 0, 25, 50);
+                    NpoiExcelHelper.setMergedRegion(sheet, row, 51, "釉彩缺陷", 0, 0, 51, 78);
+                    NpoiExcelHelper.setMergedRegion(sheet, row, 79, "看火缺陷", 0, 0, 79, 88);
 
                     IRow row2 = sheet.CreateRow(1);
                     NpoiExcelHelper.setMergedRegion(sheet, row2, 9, "外销", 1, 1, 9, 10);
@@ -635,44 +670,10 @@ namespace SimpleWare.SelPorcelainForms
 
                     for (int i = 0; i < faltsArray.Length; i++)
                     {
-                        int j = i * 2 + 23;
+                        int j = i * 2 + 25;
                         NpoiExcelHelper.setMergedRegion(sheet, row2, j, faltsArray[i], 1, 1, j, j+1);
                     }
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 23, "加工斑点", 1, 1, 23, 24);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 25, "针孔", 1, 1, 25, 26);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 27, "斑点", 1, 1, 27, 28);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 29, "阴裂", 1, 1, 29, 30);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 31, "凹凸", 1, 1, 31, 32);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 33, "泥渣", 1, 1, 33, 34);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 35, "缺泥", 1, 1, 35, 36);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 37, "粗糙", 1, 1, 37, 38);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 39, "开裂", 1, 1, 39, 40);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 41, "裂耳", 1, 1, 41, 42);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 43, "变形", 1, 1, 43, 44);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 45, "其他", 1, 1, 45, 46);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 47, "小计", 1, 1, 47, 48);
 
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 48, "色不均", 1, 1, 48, 49);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 50, "色脏", 1, 1, 50, 51);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 52, "缺釉", 1, 1, 52, 53);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 54, "釉彩斑点", 1, 1, 54, 55);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 56, "缩釉", 1, 1, 56, 57);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 58, "釉缕", 1, 1, 58, 59);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 60, "毛孔", 1, 1, 60, 61);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 62, "落渣", 1, 1, 62, 63);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 64, "粘疤", 1, 1, 64, 65);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 66, "粘渣脚", 1, 1, 66, 67);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 68, "伤裂", 1, 1, 68, 69);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 70, "薄釉", 1, 1, 70, 71);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 72, "其他", 1, 1, 72, 73);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 74, "小计", 1, 1, 74, 75);
-
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 76, "欠火", 1, 1, 76, 77);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 78, "过火", 1, 1, 78, 79);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 80, "釉泡", 1, 1, 80, 81);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 82, "出损", 1, 1, 82, 83);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 84, "其他", 1, 1, 84, 85);
-                    //NpoiExcelHelper.setMergedRegion(sheet, row2, 86, "小计", 1, 1, 86, 87);
 
                     IRow row3 = sheet.CreateRow(2);
                     NpoiExcelHelper.setQtyAndRate(row3, 9, 88,isNeedRate);

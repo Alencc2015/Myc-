@@ -30,6 +30,30 @@
         {
             this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
             this.rptGrid = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+            this.begdate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.labelX61 = new DevComponents.DotNetBar.LabelX();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.labelX60 = new DevComponents.DotNetBar.LabelX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.cmbmodelrpt = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX58 = new DevComponents.DotNetBar.LabelX();
+            this.cmbcolorrpt = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX59 = new DevComponents.DotNetBar.LabelX();
+            this.comboItem8 = new DevComponents.Editors.ComboItem();
+            this.comboItem7 = new DevComponents.Editors.ComboItem();
+            this.cmbkilnno = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.lblOpr = new DevComponents.DotNetBar.LabelX();
+            this.cmbOpr = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbMaterial = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX10 = new DevComponents.DotNetBar.LabelX();
+            this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.cbworknum = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem3 = new DevComponents.Editors.ComboItem();
+            this.comboItem4 = new DevComponents.Editors.ComboItem();
+            this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
+            this.enddate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.layoutGroup1 = new DevComponents.DotNetBar.Layout.LayoutGroup();
             this.PlGoodsID = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.PlModelNo = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.PlColor = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -47,6 +71,8 @@
             this.gridColumn79 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn84 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn85 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn5 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn6 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -119,30 +145,6 @@
             this.gridColumn74 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn75 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn76 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.begdate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.labelX61 = new DevComponents.DotNetBar.LabelX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.labelX60 = new DevComponents.DotNetBar.LabelX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.cmbmodelrpt = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX58 = new DevComponents.DotNetBar.LabelX();
-            this.cmbcolorrpt = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX59 = new DevComponents.DotNetBar.LabelX();
-            this.comboItem8 = new DevComponents.Editors.ComboItem();
-            this.comboItem7 = new DevComponents.Editors.ComboItem();
-            this.cmbkilnno = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.lblOpr = new DevComponents.DotNetBar.LabelX();
-            this.cmbOpr = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.cmbMaterial = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX10 = new DevComponents.DotNetBar.LabelX();
-            this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.cbworknum = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem3 = new DevComponents.Editors.ComboItem();
-            this.comboItem4 = new DevComponents.Editors.ComboItem();
-            this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
-            this.enddate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.layoutGroup1 = new DevComponents.DotNetBar.Layout.LayoutGroup();
             this.panelEx3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.begdate)).BeginInit();
             this.panelEx2.SuspendLayout();
@@ -202,6 +204,8 @@
             this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn79);
             this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn2);
             this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn3);
+            this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn84);
+            this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn85);
             this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn4);
             this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn5);
             this.rptGrid.PrimaryGrid.Columns.Add(this.gridColumn6);
@@ -283,799 +287,6 @@
             this.rptGrid.Text = "superGridControl1";
             this.rptGrid.PostRenderCell += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridPostRenderCellEventArgs>(this.rptGrid_PostRenderCell);
             this.rptGrid.PreRenderCell += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridPreRenderCellEventArgs>(this.rptGrid_PreRenderCell);
-            // 
-            // PlGoodsID
-            // 
-            this.PlGoodsID.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleLeft;
-            this.PlGoodsID.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.PlGoodsID.DataPropertyName = "PlGoodsID";
-            this.PlGoodsID.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.PlGoodsID.HeaderText = "产品编号";
-            this.PlGoodsID.Name = "PlGoodsID";
-            this.PlGoodsID.Visible = false;
-            // 
-            // PlModelNo
-            // 
-            this.PlModelNo.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleLeft;
-            this.PlModelNo.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.PlModelNo.DataPropertyName = "PlModelNo";
-            this.PlModelNo.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.PlModelNo.HeaderText = "器型编号";
-            this.PlModelNo.Name = "PlModelNo";
-            // 
-            // PlColor
-            // 
-            this.PlColor.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleLeft;
-            this.PlColor.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.PlColor.DataPropertyName = "PlColor";
-            this.PlColor.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.PlColor.HeaderText = "花色名称";
-            this.PlColor.Name = "PlColor";
-            // 
-            // gridColumn68
-            // 
-            this.gridColumn68.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn68.DataPropertyName = "PlKilnNo";
-            this.gridColumn68.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn68.HeaderText = "窑炉编号";
-            this.gridColumn68.Name = "PlKilnNo";
-            // 
-            // gridColumn81
-            // 
-            this.gridColumn81.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn81.DataPropertyName = "FMaterial";
-            this.gridColumn81.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn81.HeaderText = "瓷质";
-            this.gridColumn81.Name = "FMaterial";
-            // 
-            // gridColumn82
-            // 
-            this.gridColumn82.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn82.DataPropertyName = "PlWorkNumID";
-            this.gridColumn82.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn82.HeaderText = "班次";
-            this.gridColumn82.Name = "PlWorkNumID";
-            // 
-            // gridColumn77
-            // 
-            this.gridColumn77.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn77.DataPropertyName = "FTypeSteps1";
-            this.gridColumn77.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn77.HeaderText = "成型工艺";
-            this.gridColumn77.Name = "FTypeSteps1";
-            // 
-            // gridColumn83
-            // 
-            this.gridColumn83.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
-            this.gridColumn83.DataPropertyName = "FMaterialQty";
-            this.gridColumn83.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
-            this.gridColumn83.HeaderText = "瓷重";
-            this.gridColumn83.Name = "FMaterialQty";
-            // 
-            // sumQty
-            // 
-            this.sumQty.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sumQty.DataPropertyName = "sumQty";
-            this.sumQty.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sumQty.HeaderText = "总数";
-            this.sumQty.Name = "sumQty";
-            // 
-            // gridColumn80
-            // 
-            this.gridColumn80.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn80.DataPropertyName = "WXQTY";
-            this.gridColumn80.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn80.HeaderText = "量";
-            this.gridColumn80.Name = "WXQTY";
-            // 
-            // WXRATE
-            // 
-            this.WXRATE.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.WXRATE.DataPropertyName = "WXRATE";
-            this.WXRATE.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.WXRATE.HeaderText = "%";
-            this.WXRATE.Name = "WXRATE";
-            this.WXRATE.Width = 60;
-            // 
-            // NXQty
-            // 
-            this.NXQty.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.NXQty.DataPropertyName = "NXQty";
-            this.NXQty.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.NXQty.HeaderText = "量";
-            this.NXQty.Name = "NXQty";
-            this.NXQty.Width = 60;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn1.DataPropertyName = "NXRATE";
-            this.gridColumn1.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn1.HeaderText = "%";
-            this.gridColumn1.Name = "NXRATE";
-            this.gridColumn1.Width = 60;
-            // 
-            // gridColumn78
-            // 
-            this.gridColumn78.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn78.DataPropertyName = "BJQty";
-            this.gridColumn78.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn78.HeaderText = "量";
-            this.gridColumn78.Name = "BJQty";
-            this.gridColumn78.Width = 60;
-            // 
-            // gridColumn79
-            // 
-            this.gridColumn79.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn79.DataPropertyName = "BJRate";
-            this.gridColumn79.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn79.HeaderText = "%";
-            this.gridColumn79.Name = "BJRate";
-            this.gridColumn79.Width = 60;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn2.DataPropertyName = "BQty";
-            this.gridColumn2.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn2.HeaderText = "量";
-            this.gridColumn2.Name = "BQty";
-            this.gridColumn2.Width = 60;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn3.DataPropertyName = "BRate";
-            this.gridColumn3.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn3.HeaderText = "%";
-            this.gridColumn3.Name = "BRate";
-            this.gridColumn3.Width = 60;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn4.DataPropertyName = "BUQty";
-            this.gridColumn4.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn4.HeaderText = "量";
-            this.gridColumn4.Name = "BUQty";
-            this.gridColumn4.Width = 60;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn5.DataPropertyName = "BURate";
-            this.gridColumn5.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn5.HeaderText = "%";
-            this.gridColumn5.Name = "BURate";
-            this.gridColumn5.Width = 60;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn6.DataPropertyName = "FPQty";
-            this.gridColumn6.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn6.HeaderText = "量";
-            this.gridColumn6.Name = "FPQty";
-            this.gridColumn6.Width = 60;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn7.DataPropertyName = "FPRate";
-            this.gridColumn7.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn7.HeaderText = "%";
-            this.gridColumn7.Name = "FPRate";
-            this.gridColumn7.Width = 60;
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn8.DataPropertyName = "sumQty1";
-            this.gridColumn8.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn8.HeaderText = "量";
-            this.gridColumn8.Name = "sumQty1";
-            this.gridColumn8.Width = 60;
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn9.DataPropertyName = "sumRate1";
-            this.gridColumn9.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn9.HeaderText = "%";
-            this.gridColumn9.Name = "sumRate1";
-            this.gridColumn9.Width = 60;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn10.DataPropertyName = "JGBDQty";
-            this.gridColumn10.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn10.HeaderText = "量";
-            this.gridColumn10.Name = "JGBDQty";
-            this.gridColumn10.Width = 60;
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn11.DataPropertyName = "JGBDRate";
-            this.gridColumn11.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn11.HeaderText = "%";
-            this.gridColumn11.Name = "JGBDRate";
-            this.gridColumn11.Width = 60;
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn12.DataPropertyName = "ZKQty";
-            this.gridColumn12.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn12.HeaderText = "量";
-            this.gridColumn12.Name = "ZKQty";
-            this.gridColumn12.Width = 60;
-            // 
-            // gridColumn13
-            // 
-            this.gridColumn13.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn13.DataPropertyName = "ZKRate";
-            this.gridColumn13.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn13.HeaderText = "%";
-            this.gridColumn13.Name = "ZKRate";
-            this.gridColumn13.Width = 60;
-            // 
-            // gridColumn14
-            // 
-            this.gridColumn14.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn14.DataPropertyName = "BDQty";
-            this.gridColumn14.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn14.HeaderText = "量";
-            this.gridColumn14.Name = "BDQty";
-            this.gridColumn14.Width = 60;
-            // 
-            // gridColumn15
-            // 
-            this.gridColumn15.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn15.DataPropertyName = "BDRate";
-            this.gridColumn15.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn15.HeaderText = "%";
-            this.gridColumn15.Name = "BDRate";
-            this.gridColumn15.Width = 60;
-            // 
-            // gridColumn16
-            // 
-            this.gridColumn16.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn16.DataPropertyName = "YLQty";
-            this.gridColumn16.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn16.HeaderText = "量";
-            this.gridColumn16.Name = "YLQty";
-            this.gridColumn16.Width = 60;
-            // 
-            // gridColumn17
-            // 
-            this.gridColumn17.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn17.DataPropertyName = "YLRate";
-            this.gridColumn17.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn17.HeaderText = "%";
-            this.gridColumn17.Name = "YLRate";
-            this.gridColumn17.Width = 60;
-            // 
-            // gridColumn18
-            // 
-            this.gridColumn18.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn18.DataPropertyName = "ATQty";
-            this.gridColumn18.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn18.HeaderText = "量";
-            this.gridColumn18.Name = "ATQty";
-            this.gridColumn18.Width = 60;
-            // 
-            // gridColumn19
-            // 
-            this.gridColumn19.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn19.DataPropertyName = "ATRate";
-            this.gridColumn19.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn19.HeaderText = "%";
-            this.gridColumn19.Name = "ATRate";
-            this.gridColumn19.Width = 60;
-            // 
-            // gridColumn20
-            // 
-            this.gridColumn20.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn20.DataPropertyName = "NZQty";
-            this.gridColumn20.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn20.HeaderText = "量";
-            this.gridColumn20.Name = "NZQty";
-            this.gridColumn20.Width = 60;
-            // 
-            // gridColumn21
-            // 
-            this.gridColumn21.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn21.DataPropertyName = "NZRate";
-            this.gridColumn21.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn21.HeaderText = "%";
-            this.gridColumn21.Name = "NZRate";
-            this.gridColumn21.Width = 60;
-            // 
-            // gridColumn22
-            // 
-            this.gridColumn22.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn22.DataPropertyName = "QNQty";
-            this.gridColumn22.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn22.HeaderText = "量";
-            this.gridColumn22.Name = "QNQty";
-            this.gridColumn22.Width = 60;
-            // 
-            // gridColumn23
-            // 
-            this.gridColumn23.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn23.DataPropertyName = "QNRate";
-            this.gridColumn23.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn23.HeaderText = "%";
-            this.gridColumn23.Name = "QNRate";
-            this.gridColumn23.Width = 60;
-            // 
-            // gridColumn24
-            // 
-            this.gridColumn24.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn24.DataPropertyName = "CCQty";
-            this.gridColumn24.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn24.HeaderText = "量";
-            this.gridColumn24.Name = "CCQty";
-            this.gridColumn24.Width = 60;
-            // 
-            // gridColumn25
-            // 
-            this.gridColumn25.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn25.DataPropertyName = "CCRate";
-            this.gridColumn25.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn25.HeaderText = "%";
-            this.gridColumn25.Name = "CCRate";
-            this.gridColumn25.Width = 60;
-            // 
-            // gridColumn26
-            // 
-            this.gridColumn26.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn26.DataPropertyName = "KLQty";
-            this.gridColumn26.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn26.HeaderText = "量";
-            this.gridColumn26.Name = "KLQty";
-            this.gridColumn26.Width = 60;
-            // 
-            // gridColumn27
-            // 
-            this.gridColumn27.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn27.DataPropertyName = "KLRate";
-            this.gridColumn27.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn27.HeaderText = "%";
-            this.gridColumn27.Name = "KLRate";
-            this.gridColumn27.Width = 60;
-            // 
-            // gridColumn28
-            // 
-            this.gridColumn28.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn28.DataPropertyName = "LEQty";
-            this.gridColumn28.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn28.HeaderText = "量";
-            this.gridColumn28.Name = "LEQty";
-            this.gridColumn28.Width = 60;
-            // 
-            // gridColumn29
-            // 
-            this.gridColumn29.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn29.DataPropertyName = "LERate";
-            this.gridColumn29.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn29.HeaderText = "%";
-            this.gridColumn29.Name = "LERate";
-            this.gridColumn29.Width = 60;
-            // 
-            // gridColumn30
-            // 
-            this.gridColumn30.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn30.DataPropertyName = "BXQty";
-            this.gridColumn30.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn30.HeaderText = "量";
-            this.gridColumn30.Name = "BXQty";
-            this.gridColumn30.Width = 60;
-            // 
-            // gridColumn31
-            // 
-            this.gridColumn31.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn31.DataPropertyName = "BXRate";
-            this.gridColumn31.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn31.HeaderText = "%";
-            this.gridColumn31.Name = "BXRate";
-            this.gridColumn31.Width = 60;
-            // 
-            // gridColumn32
-            // 
-            this.gridColumn32.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn32.DataPropertyName = "CXQTQty";
-            this.gridColumn32.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn32.HeaderText = "量";
-            this.gridColumn32.Name = "CXQTQty";
-            this.gridColumn32.Width = 60;
-            // 
-            // gridColumn33
-            // 
-            this.gridColumn33.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn33.DataPropertyName = "CXQTRate";
-            this.gridColumn33.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn33.HeaderText = "%";
-            this.gridColumn33.Name = "CXQTRate";
-            this.gridColumn33.Width = 60;
-            // 
-            // gridColumn34
-            // 
-            this.gridColumn34.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn34.DataPropertyName = "sumQty2";
-            this.gridColumn34.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn34.HeaderText = "量";
-            this.gridColumn34.Name = "sumQty2";
-            // 
-            // gridColumn35
-            // 
-            this.gridColumn35.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn35.DataPropertyName = "sumRate2";
-            this.gridColumn35.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn35.HeaderText = "%";
-            this.gridColumn35.Name = "sumRate2";
-            this.gridColumn35.Width = 60;
-            // 
-            // gridColumn36
-            // 
-            this.gridColumn36.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn36.DataPropertyName = "SBJQty";
-            this.gridColumn36.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn36.HeaderText = "量";
-            this.gridColumn36.Name = "SBJQty";
-            this.gridColumn36.Width = 60;
-            // 
-            // gridColumn37
-            // 
-            this.gridColumn37.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn37.DataPropertyName = "SBJRate";
-            this.gridColumn37.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn37.HeaderText = "%";
-            this.gridColumn37.Name = "SBJRate";
-            this.gridColumn37.Width = 60;
-            // 
-            // gridColumn38
-            // 
-            this.gridColumn38.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn38.DataPropertyName = "SZQty";
-            this.gridColumn38.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn38.HeaderText = "量";
-            this.gridColumn38.Name = "SZQty";
-            this.gridColumn38.Width = 60;
-            // 
-            // gridColumn39
-            // 
-            this.gridColumn39.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn39.DataPropertyName = "SZRate";
-            this.gridColumn39.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn39.HeaderText = "%";
-            this.gridColumn39.Name = "SZRate";
-            this.gridColumn39.Width = 60;
-            // 
-            // gridColumn40
-            // 
-            this.gridColumn40.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn40.DataPropertyName = "QYQty";
-            this.gridColumn40.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn40.HeaderText = "量";
-            this.gridColumn40.Name = "QYQty";
-            this.gridColumn40.Width = 60;
-            // 
-            // gridColumn41
-            // 
-            this.gridColumn41.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn41.DataPropertyName = "QYRate";
-            this.gridColumn41.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn41.HeaderText = "%";
-            this.gridColumn41.Name = "QYRate";
-            this.gridColumn41.Width = 60;
-            // 
-            // gridColumn42
-            // 
-            this.gridColumn42.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn42.DataPropertyName = "YCBDQty";
-            this.gridColumn42.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn42.HeaderText = "量";
-            this.gridColumn42.Name = "YCBDQty";
-            this.gridColumn42.Width = 60;
-            // 
-            // gridColumn43
-            // 
-            this.gridColumn43.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn43.DataPropertyName = "YCBDRate";
-            this.gridColumn43.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn43.HeaderText = "%";
-            this.gridColumn43.Name = "YCBDRate";
-            this.gridColumn43.Width = 60;
-            // 
-            // gridColumn44
-            // 
-            this.gridColumn44.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn44.DataPropertyName = "SYQty";
-            this.gridColumn44.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn44.HeaderText = "量";
-            this.gridColumn44.Name = "SYQty";
-            this.gridColumn44.Width = 60;
-            // 
-            // gridColumn45
-            // 
-            this.gridColumn45.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn45.DataPropertyName = "SYRate";
-            this.gridColumn45.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn45.HeaderText = "%";
-            this.gridColumn45.Name = "SYRate";
-            this.gridColumn45.Width = 60;
-            // 
-            // gridColumn46
-            // 
-            this.gridColumn46.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn46.DataPropertyName = "YoLQty";
-            this.gridColumn46.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn46.HeaderText = "量";
-            this.gridColumn46.Name = "YoLQty";
-            this.gridColumn46.Width = 60;
-            // 
-            // gridColumn47
-            // 
-            this.gridColumn47.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn47.DataPropertyName = "YoLRate";
-            this.gridColumn47.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn47.HeaderText = "%";
-            this.gridColumn47.Name = "YoLRate";
-            this.gridColumn47.Width = 60;
-            // 
-            // gridColumn48
-            // 
-            this.gridColumn48.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn48.DataPropertyName = "MKQty";
-            this.gridColumn48.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn48.HeaderText = "量";
-            this.gridColumn48.Name = "MKQty";
-            this.gridColumn48.Width = 60;
-            // 
-            // gridColumn49
-            // 
-            this.gridColumn49.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn49.DataPropertyName = "MKRate";
-            this.gridColumn49.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn49.HeaderText = "%";
-            this.gridColumn49.Name = "MKRate";
-            this.gridColumn49.Width = 60;
-            // 
-            // gridColumn50
-            // 
-            this.gridColumn50.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn50.DataPropertyName = "LZQty";
-            this.gridColumn50.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn50.HeaderText = "量";
-            this.gridColumn50.Name = "LZQty";
-            this.gridColumn50.Width = 60;
-            // 
-            // gridColumn51
-            // 
-            this.gridColumn51.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn51.DataPropertyName = "LZRate";
-            this.gridColumn51.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn51.HeaderText = "%";
-            this.gridColumn51.Name = "LZRate";
-            this.gridColumn51.Width = 60;
-            // 
-            // gridColumn52
-            // 
-            this.gridColumn52.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn52.DataPropertyName = "NBQty";
-            this.gridColumn52.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn52.HeaderText = "量";
-            this.gridColumn52.Name = "NBQty";
-            this.gridColumn52.Width = 60;
-            // 
-            // gridColumn53
-            // 
-            this.gridColumn53.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn53.DataPropertyName = "NBRate";
-            this.gridColumn53.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn53.HeaderText = "%";
-            this.gridColumn53.Name = "NBRate";
-            this.gridColumn53.Width = 60;
-            // 
-            // gridColumn54
-            // 
-            this.gridColumn54.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn54.DataPropertyName = "NZJQty";
-            this.gridColumn54.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn54.HeaderText = "量";
-            this.gridColumn54.Name = "NZJQty";
-            this.gridColumn54.Width = 60;
-            // 
-            // gridColumn55
-            // 
-            this.gridColumn55.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn55.DataPropertyName = "NZJRate";
-            this.gridColumn55.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn55.HeaderText = "%";
-            this.gridColumn55.Name = "NZJRate";
-            this.gridColumn55.Width = 60;
-            // 
-            // gridColumn56
-            // 
-            this.gridColumn56.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn56.DataPropertyName = "SLQty";
-            this.gridColumn56.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn56.HeaderText = "量";
-            this.gridColumn56.Name = "SLQty";
-            this.gridColumn56.Width = 60;
-            // 
-            // gridColumn57
-            // 
-            this.gridColumn57.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn57.DataPropertyName = "SLRate";
-            this.gridColumn57.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn57.HeaderText = "%";
-            this.gridColumn57.Name = "SLRate";
-            this.gridColumn57.Width = 60;
-            // 
-            // gridColumn58
-            // 
-            this.gridColumn58.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn58.DataPropertyName = "BOUQty";
-            this.gridColumn58.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn58.HeaderText = "量";
-            this.gridColumn58.Name = "BOUQty";
-            this.gridColumn58.Width = 60;
-            // 
-            // gridColumn59
-            // 
-            this.gridColumn59.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn59.DataPropertyName = "BOURate";
-            this.gridColumn59.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn59.HeaderText = "%";
-            this.gridColumn59.Name = "BOURate";
-            this.gridColumn59.Width = 60;
-            // 
-            // gridColumn60
-            // 
-            this.gridColumn60.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn60.DataPropertyName = "YCQTQty";
-            this.gridColumn60.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn60.HeaderText = "量";
-            this.gridColumn60.Name = "YCQTQty";
-            this.gridColumn60.Width = 60;
-            // 
-            // gridColumn61
-            // 
-            this.gridColumn61.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn61.DataPropertyName = "YCQTRate";
-            this.gridColumn61.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn61.HeaderText = "%";
-            this.gridColumn61.Name = "YCQTRate";
-            this.gridColumn61.Width = 60;
-            // 
-            // gridColumn62
-            // 
-            this.gridColumn62.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn62.DataPropertyName = "sumQty3";
-            this.gridColumn62.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn62.HeaderText = "量";
-            this.gridColumn62.Name = "sumQty3";
-            // 
-            // gridColumn63
-            // 
-            this.gridColumn63.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn63.DataPropertyName = "sumRate3";
-            this.gridColumn63.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn63.HeaderText = "%";
-            this.gridColumn63.Name = "sumRate3";
-            this.gridColumn63.Width = 60;
-            // 
-            // gridColumn64
-            // 
-            this.gridColumn64.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn64.DataPropertyName = "QHQty";
-            this.gridColumn64.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn64.HeaderText = "量";
-            this.gridColumn64.Name = "QHQty";
-            this.gridColumn64.Width = 60;
-            // 
-            // gridColumn65
-            // 
-            this.gridColumn65.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn65.DataPropertyName = "QHRate";
-            this.gridColumn65.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn65.HeaderText = "%";
-            this.gridColumn65.Name = "QHRate";
-            this.gridColumn65.Width = 60;
-            // 
-            // gridColumn66
-            // 
-            this.gridColumn66.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn66.DataPropertyName = "GHQTY";
-            this.gridColumn66.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn66.HeaderText = "量";
-            this.gridColumn66.Name = "GHQTY";
-            this.gridColumn66.Width = 60;
-            // 
-            // gridColumn67
-            // 
-            this.gridColumn67.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn67.DataPropertyName = "GHRate";
-            this.gridColumn67.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn67.HeaderText = "%";
-            this.gridColumn67.Name = "GHRate";
-            this.gridColumn67.Width = 60;
-            // 
-            // gridColumn69
-            // 
-            this.gridColumn69.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn69.DataPropertyName = "YPQty";
-            this.gridColumn69.EnableHeaderMarkup = true;
-            this.gridColumn69.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn69.HeaderText = "量";
-            this.gridColumn69.Name = "YPQty";
-            this.gridColumn69.Width = 60;
-            // 
-            // gridColumn70
-            // 
-            this.gridColumn70.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn70.DataPropertyName = "YPRate";
-            this.gridColumn70.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn70.HeaderText = "%";
-            this.gridColumn70.Name = "YPRate";
-            this.gridColumn70.Width = 60;
-            // 
-            // gridColumn71
-            // 
-            this.gridColumn71.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn71.DataPropertyName = "CSQty";
-            this.gridColumn71.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn71.HeaderText = "量";
-            this.gridColumn71.Name = "CSQty";
-            this.gridColumn71.Width = 60;
-            // 
-            // gridColumn72
-            // 
-            this.gridColumn72.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn72.DataPropertyName = "CSRate";
-            this.gridColumn72.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn72.HeaderText = "%";
-            this.gridColumn72.Name = "CSRate";
-            this.gridColumn72.Width = 60;
-            // 
-            // gridColumn73
-            // 
-            this.gridColumn73.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn73.DataPropertyName = "KHQTQty";
-            this.gridColumn73.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn73.HeaderText = "量";
-            this.gridColumn73.Name = "KHQTQty";
-            this.gridColumn73.Width = 60;
-            // 
-            // gridColumn74
-            // 
-            this.gridColumn74.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn74.DataPropertyName = "KHQTRate";
-            this.gridColumn74.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn74.HeaderText = "%";
-            this.gridColumn74.Name = "KHQTRate";
-            this.gridColumn74.Width = 60;
-            // 
-            // gridColumn75
-            // 
-            this.gridColumn75.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn75.DataPropertyName = "sumQty4";
-            this.gridColumn75.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn75.HeaderText = "量";
-            this.gridColumn75.Name = "sumQty4";
-            // 
-            // gridColumn76
-            // 
-            this.gridColumn76.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn76.DataPropertyName = "sumRate4";
-            this.gridColumn76.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gridColumn76.HeaderText = "%";
-            this.gridColumn76.Name = "sumRate4";
-            this.gridColumn76.Width = 60;
             // 
             // begdate
             // 
@@ -1488,6 +699,820 @@
             this.layoutGroup1.TextPosition = DevComponents.DotNetBar.Layout.eLayoutPosition.Top;
             this.layoutGroup1.Width = 200;
             // 
+            // PlGoodsID
+            // 
+            this.PlGoodsID.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleLeft;
+            this.PlGoodsID.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.PlGoodsID.DataPropertyName = "PlGoodsID";
+            this.PlGoodsID.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.PlGoodsID.HeaderText = "产品编号";
+            this.PlGoodsID.Name = "PlGoodsID";
+            this.PlGoodsID.Visible = false;
+            // 
+            // PlModelNo
+            // 
+            this.PlModelNo.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleLeft;
+            this.PlModelNo.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.PlModelNo.DataPropertyName = "PlModelNo";
+            this.PlModelNo.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.PlModelNo.HeaderText = "器型编号";
+            this.PlModelNo.Name = "PlModelNo";
+            // 
+            // PlColor
+            // 
+            this.PlColor.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleLeft;
+            this.PlColor.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.PlColor.DataPropertyName = "PlColor";
+            this.PlColor.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.PlColor.HeaderText = "花色名称";
+            this.PlColor.Name = "PlColor";
+            // 
+            // gridColumn68
+            // 
+            this.gridColumn68.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn68.DataPropertyName = "PlKilnNo";
+            this.gridColumn68.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn68.HeaderText = "窑炉编号";
+            this.gridColumn68.Name = "PlKilnNo";
+            // 
+            // gridColumn81
+            // 
+            this.gridColumn81.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn81.DataPropertyName = "FMaterial";
+            this.gridColumn81.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn81.HeaderText = "瓷质";
+            this.gridColumn81.Name = "FMaterial";
+            // 
+            // gridColumn82
+            // 
+            this.gridColumn82.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn82.DataPropertyName = "PlWorkNumID";
+            this.gridColumn82.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn82.HeaderText = "班次";
+            this.gridColumn82.Name = "PlWorkNumID";
+            // 
+            // gridColumn77
+            // 
+            this.gridColumn77.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn77.DataPropertyName = "FTypeSteps1";
+            this.gridColumn77.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn77.HeaderText = "成型工艺";
+            this.gridColumn77.Name = "FTypeSteps1";
+            // 
+            // gridColumn83
+            // 
+            this.gridColumn83.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn83.DataPropertyName = "FMaterialQty";
+            this.gridColumn83.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn83.HeaderText = "瓷重";
+            this.gridColumn83.Name = "FMaterialQty";
+            // 
+            // sumQty
+            // 
+            this.sumQty.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.sumQty.DataPropertyName = "sumQty";
+            this.sumQty.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.sumQty.HeaderText = "总数";
+            this.sumQty.Name = "sumQty";
+            this.sumQty.Width = 75;
+            // 
+            // gridColumn80
+            // 
+            this.gridColumn80.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn80.DataPropertyName = "WXQTY";
+            this.gridColumn80.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn80.HeaderText = "量";
+            this.gridColumn80.Name = "WXQTY";
+            this.gridColumn80.Width = 75;
+            // 
+            // WXRATE
+            // 
+            this.WXRATE.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.WXRATE.DataPropertyName = "WXRATE";
+            this.WXRATE.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.WXRATE.HeaderText = "%";
+            this.WXRATE.Name = "WXRATE";
+            this.WXRATE.Width = 60;
+            // 
+            // NXQty
+            // 
+            this.NXQty.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.NXQty.DataPropertyName = "NXQty";
+            this.NXQty.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.NXQty.HeaderText = "量";
+            this.NXQty.Name = "NXQty";
+            this.NXQty.Width = 75;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn1.DataPropertyName = "NXRATE";
+            this.gridColumn1.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn1.HeaderText = "%";
+            this.gridColumn1.Name = "NXRATE";
+            this.gridColumn1.Width = 60;
+            // 
+            // gridColumn78
+            // 
+            this.gridColumn78.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn78.DataPropertyName = "BJQty";
+            this.gridColumn78.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn78.HeaderText = "量";
+            this.gridColumn78.Name = "BJQty";
+            this.gridColumn78.Width = 75;
+            // 
+            // gridColumn79
+            // 
+            this.gridColumn79.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn79.DataPropertyName = "BJRate";
+            this.gridColumn79.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn79.HeaderText = "%";
+            this.gridColumn79.Name = "BJRate";
+            this.gridColumn79.Width = 60;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn2.DataPropertyName = "BQty";
+            this.gridColumn2.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn2.HeaderText = "量";
+            this.gridColumn2.Name = "BQty";
+            this.gridColumn2.Width = 75;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn3.DataPropertyName = "BRate";
+            this.gridColumn3.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn3.HeaderText = "%";
+            this.gridColumn3.Name = "BRate";
+            this.gridColumn3.Width = 60;
+            // 
+            // gridColumn84
+            // 
+            this.gridColumn84.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn84.DataPropertyName = "CQty";
+            this.gridColumn84.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn84.HeaderText = "量";
+            this.gridColumn84.Name = "CQty";
+            this.gridColumn84.Width = 75;
+            // 
+            // gridColumn85
+            // 
+            this.gridColumn85.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn85.DataPropertyName = "CRate";
+            this.gridColumn85.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F);
+            this.gridColumn85.HeaderText = "%";
+            this.gridColumn85.Name = "CRate";
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn4.DataPropertyName = "BUQty";
+            this.gridColumn4.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn4.HeaderText = "量";
+            this.gridColumn4.Name = "BUQty";
+            this.gridColumn4.Width = 75;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn5.DataPropertyName = "BURate";
+            this.gridColumn5.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn5.HeaderText = "%";
+            this.gridColumn5.Name = "BURate";
+            this.gridColumn5.Width = 60;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn6.DataPropertyName = "FPQty";
+            this.gridColumn6.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn6.HeaderText = "量";
+            this.gridColumn6.Name = "FPQty";
+            this.gridColumn6.Width = 75;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn7.DataPropertyName = "FPRate";
+            this.gridColumn7.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn7.HeaderText = "%";
+            this.gridColumn7.Name = "FPRate";
+            this.gridColumn7.Width = 60;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn8.DataPropertyName = "sumQty1";
+            this.gridColumn8.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn8.HeaderText = "量";
+            this.gridColumn8.Name = "sumQty1";
+            this.gridColumn8.Width = 75;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn9.DataPropertyName = "sumRate1";
+            this.gridColumn9.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn9.HeaderText = "%";
+            this.gridColumn9.Name = "sumRate1";
+            this.gridColumn9.Width = 60;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn10.DataPropertyName = "JGBDQty";
+            this.gridColumn10.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn10.HeaderText = "量";
+            this.gridColumn10.Name = "JGBDQty";
+            this.gridColumn10.Width = 75;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn11.DataPropertyName = "JGBDRate";
+            this.gridColumn11.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn11.HeaderText = "%";
+            this.gridColumn11.Name = "JGBDRate";
+            this.gridColumn11.Width = 60;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn12.DataPropertyName = "ZKQty";
+            this.gridColumn12.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn12.HeaderText = "量";
+            this.gridColumn12.Name = "ZKQty";
+            this.gridColumn12.Width = 75;
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn13.DataPropertyName = "ZKRate";
+            this.gridColumn13.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn13.HeaderText = "%";
+            this.gridColumn13.Name = "ZKRate";
+            this.gridColumn13.Width = 60;
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn14.DataPropertyName = "BDQty";
+            this.gridColumn14.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn14.HeaderText = "量";
+            this.gridColumn14.Name = "BDQty";
+            this.gridColumn14.Width = 75;
+            // 
+            // gridColumn15
+            // 
+            this.gridColumn15.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn15.DataPropertyName = "BDRate";
+            this.gridColumn15.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn15.HeaderText = "%";
+            this.gridColumn15.Name = "BDRate";
+            this.gridColumn15.Width = 60;
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn16.DataPropertyName = "YLQty";
+            this.gridColumn16.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn16.HeaderText = "量";
+            this.gridColumn16.Name = "YLQty";
+            this.gridColumn16.Width = 75;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn17.DataPropertyName = "YLRate";
+            this.gridColumn17.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn17.HeaderText = "%";
+            this.gridColumn17.Name = "YLRate";
+            this.gridColumn17.Width = 60;
+            // 
+            // gridColumn18
+            // 
+            this.gridColumn18.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn18.DataPropertyName = "ATQty";
+            this.gridColumn18.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn18.HeaderText = "量";
+            this.gridColumn18.Name = "ATQty";
+            this.gridColumn18.Width = 75;
+            // 
+            // gridColumn19
+            // 
+            this.gridColumn19.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn19.DataPropertyName = "ATRate";
+            this.gridColumn19.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn19.HeaderText = "%";
+            this.gridColumn19.Name = "ATRate";
+            this.gridColumn19.Width = 60;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn20.DataPropertyName = "NZQty";
+            this.gridColumn20.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn20.HeaderText = "量";
+            this.gridColumn20.Name = "NZQty";
+            this.gridColumn20.Width = 75;
+            // 
+            // gridColumn21
+            // 
+            this.gridColumn21.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn21.DataPropertyName = "NZRate";
+            this.gridColumn21.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn21.HeaderText = "%";
+            this.gridColumn21.Name = "NZRate";
+            this.gridColumn21.Width = 60;
+            // 
+            // gridColumn22
+            // 
+            this.gridColumn22.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn22.DataPropertyName = "QNQty";
+            this.gridColumn22.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn22.HeaderText = "量";
+            this.gridColumn22.Name = "QNQty";
+            this.gridColumn22.Width = 75;
+            // 
+            // gridColumn23
+            // 
+            this.gridColumn23.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn23.DataPropertyName = "QNRate";
+            this.gridColumn23.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn23.HeaderText = "%";
+            this.gridColumn23.Name = "QNRate";
+            this.gridColumn23.Width = 60;
+            // 
+            // gridColumn24
+            // 
+            this.gridColumn24.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn24.DataPropertyName = "CCQty";
+            this.gridColumn24.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn24.HeaderText = "量";
+            this.gridColumn24.Name = "CCQty";
+            this.gridColumn24.Width = 75;
+            // 
+            // gridColumn25
+            // 
+            this.gridColumn25.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn25.DataPropertyName = "CCRate";
+            this.gridColumn25.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn25.HeaderText = "%";
+            this.gridColumn25.Name = "CCRate";
+            this.gridColumn25.Width = 60;
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn26.DataPropertyName = "KLQty";
+            this.gridColumn26.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn26.HeaderText = "量";
+            this.gridColumn26.Name = "KLQty";
+            this.gridColumn26.Width = 75;
+            // 
+            // gridColumn27
+            // 
+            this.gridColumn27.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn27.DataPropertyName = "KLRate";
+            this.gridColumn27.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn27.HeaderText = "%";
+            this.gridColumn27.Name = "KLRate";
+            this.gridColumn27.Width = 60;
+            // 
+            // gridColumn28
+            // 
+            this.gridColumn28.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn28.DataPropertyName = "LEQty";
+            this.gridColumn28.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn28.HeaderText = "量";
+            this.gridColumn28.Name = "LEQty";
+            this.gridColumn28.Width = 75;
+            // 
+            // gridColumn29
+            // 
+            this.gridColumn29.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn29.DataPropertyName = "LERate";
+            this.gridColumn29.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn29.HeaderText = "%";
+            this.gridColumn29.Name = "LERate";
+            this.gridColumn29.Width = 60;
+            // 
+            // gridColumn30
+            // 
+            this.gridColumn30.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn30.DataPropertyName = "BXQty";
+            this.gridColumn30.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn30.HeaderText = "量";
+            this.gridColumn30.Name = "BXQty";
+            this.gridColumn30.Width = 75;
+            // 
+            // gridColumn31
+            // 
+            this.gridColumn31.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn31.DataPropertyName = "BXRate";
+            this.gridColumn31.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn31.HeaderText = "%";
+            this.gridColumn31.Name = "BXRate";
+            this.gridColumn31.Width = 60;
+            // 
+            // gridColumn32
+            // 
+            this.gridColumn32.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn32.DataPropertyName = "CXQTQty";
+            this.gridColumn32.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn32.HeaderText = "量";
+            this.gridColumn32.Name = "CXQTQty";
+            this.gridColumn32.Width = 75;
+            // 
+            // gridColumn33
+            // 
+            this.gridColumn33.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn33.DataPropertyName = "CXQTRate";
+            this.gridColumn33.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn33.HeaderText = "%";
+            this.gridColumn33.Name = "CXQTRate";
+            this.gridColumn33.Width = 60;
+            // 
+            // gridColumn34
+            // 
+            this.gridColumn34.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn34.DataPropertyName = "sumQty2";
+            this.gridColumn34.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn34.HeaderText = "量";
+            this.gridColumn34.Name = "sumQty2";
+            this.gridColumn34.Width = 75;
+            // 
+            // gridColumn35
+            // 
+            this.gridColumn35.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn35.DataPropertyName = "sumRate2";
+            this.gridColumn35.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn35.HeaderText = "%";
+            this.gridColumn35.Name = "sumRate2";
+            this.gridColumn35.Width = 60;
+            // 
+            // gridColumn36
+            // 
+            this.gridColumn36.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn36.DataPropertyName = "SBJQty";
+            this.gridColumn36.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn36.HeaderText = "量";
+            this.gridColumn36.Name = "SBJQty";
+            this.gridColumn36.Width = 75;
+            // 
+            // gridColumn37
+            // 
+            this.gridColumn37.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn37.DataPropertyName = "SBJRate";
+            this.gridColumn37.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn37.HeaderText = "%";
+            this.gridColumn37.Name = "SBJRate";
+            this.gridColumn37.Width = 60;
+            // 
+            // gridColumn38
+            // 
+            this.gridColumn38.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn38.DataPropertyName = "SZQty";
+            this.gridColumn38.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn38.HeaderText = "量";
+            this.gridColumn38.Name = "SZQty";
+            this.gridColumn38.Width = 75;
+            // 
+            // gridColumn39
+            // 
+            this.gridColumn39.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn39.DataPropertyName = "SZRate";
+            this.gridColumn39.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn39.HeaderText = "%";
+            this.gridColumn39.Name = "SZRate";
+            this.gridColumn39.Width = 60;
+            // 
+            // gridColumn40
+            // 
+            this.gridColumn40.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn40.DataPropertyName = "QYQty";
+            this.gridColumn40.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn40.HeaderText = "量";
+            this.gridColumn40.Name = "QYQty";
+            this.gridColumn40.Width = 75;
+            // 
+            // gridColumn41
+            // 
+            this.gridColumn41.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn41.DataPropertyName = "QYRate";
+            this.gridColumn41.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn41.HeaderText = "%";
+            this.gridColumn41.Name = "QYRate";
+            this.gridColumn41.Width = 60;
+            // 
+            // gridColumn42
+            // 
+            this.gridColumn42.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn42.DataPropertyName = "YCBDQty";
+            this.gridColumn42.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn42.HeaderText = "量";
+            this.gridColumn42.Name = "YCBDQty";
+            this.gridColumn42.Width = 75;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn43.DataPropertyName = "YCBDRate";
+            this.gridColumn43.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn43.HeaderText = "%";
+            this.gridColumn43.Name = "YCBDRate";
+            this.gridColumn43.Width = 60;
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn44.DataPropertyName = "SYQty";
+            this.gridColumn44.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn44.HeaderText = "量";
+            this.gridColumn44.Name = "SYQty";
+            this.gridColumn44.Width = 75;
+            // 
+            // gridColumn45
+            // 
+            this.gridColumn45.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn45.DataPropertyName = "SYRate";
+            this.gridColumn45.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn45.HeaderText = "%";
+            this.gridColumn45.Name = "SYRate";
+            this.gridColumn45.Width = 60;
+            // 
+            // gridColumn46
+            // 
+            this.gridColumn46.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn46.DataPropertyName = "YoLQty";
+            this.gridColumn46.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn46.HeaderText = "量";
+            this.gridColumn46.Name = "YoLQty";
+            this.gridColumn46.Width = 75;
+            // 
+            // gridColumn47
+            // 
+            this.gridColumn47.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn47.DataPropertyName = "YoLRate";
+            this.gridColumn47.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn47.HeaderText = "%";
+            this.gridColumn47.Name = "YoLRate";
+            this.gridColumn47.Width = 60;
+            // 
+            // gridColumn48
+            // 
+            this.gridColumn48.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn48.DataPropertyName = "MKQty";
+            this.gridColumn48.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn48.HeaderText = "量";
+            this.gridColumn48.Name = "MKQty";
+            this.gridColumn48.Width = 75;
+            // 
+            // gridColumn49
+            // 
+            this.gridColumn49.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn49.DataPropertyName = "MKRate";
+            this.gridColumn49.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn49.HeaderText = "%";
+            this.gridColumn49.Name = "MKRate";
+            this.gridColumn49.Width = 60;
+            // 
+            // gridColumn50
+            // 
+            this.gridColumn50.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn50.DataPropertyName = "LZQty";
+            this.gridColumn50.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn50.HeaderText = "量";
+            this.gridColumn50.Name = "LZQty";
+            this.gridColumn50.Width = 75;
+            // 
+            // gridColumn51
+            // 
+            this.gridColumn51.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn51.DataPropertyName = "LZRate";
+            this.gridColumn51.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn51.HeaderText = "%";
+            this.gridColumn51.Name = "LZRate";
+            this.gridColumn51.Width = 60;
+            // 
+            // gridColumn52
+            // 
+            this.gridColumn52.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn52.DataPropertyName = "NBQty";
+            this.gridColumn52.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn52.HeaderText = "量";
+            this.gridColumn52.Name = "NBQty";
+            this.gridColumn52.Width = 75;
+            // 
+            // gridColumn53
+            // 
+            this.gridColumn53.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn53.DataPropertyName = "NBRate";
+            this.gridColumn53.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn53.HeaderText = "%";
+            this.gridColumn53.Name = "NBRate";
+            this.gridColumn53.Width = 60;
+            // 
+            // gridColumn54
+            // 
+            this.gridColumn54.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn54.DataPropertyName = "NZJQty";
+            this.gridColumn54.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn54.HeaderText = "量";
+            this.gridColumn54.Name = "NZJQty";
+            this.gridColumn54.Width = 75;
+            // 
+            // gridColumn55
+            // 
+            this.gridColumn55.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn55.DataPropertyName = "NZJRate";
+            this.gridColumn55.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn55.HeaderText = "%";
+            this.gridColumn55.Name = "NZJRate";
+            this.gridColumn55.Width = 60;
+            // 
+            // gridColumn56
+            // 
+            this.gridColumn56.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn56.DataPropertyName = "SLQty";
+            this.gridColumn56.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn56.HeaderText = "量";
+            this.gridColumn56.Name = "SLQty";
+            this.gridColumn56.Width = 75;
+            // 
+            // gridColumn57
+            // 
+            this.gridColumn57.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn57.DataPropertyName = "SLRate";
+            this.gridColumn57.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn57.HeaderText = "%";
+            this.gridColumn57.Name = "SLRate";
+            this.gridColumn57.Width = 60;
+            // 
+            // gridColumn58
+            // 
+            this.gridColumn58.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn58.DataPropertyName = "BOUQty";
+            this.gridColumn58.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn58.HeaderText = "量";
+            this.gridColumn58.Name = "BOUQty";
+            this.gridColumn58.Width = 75;
+            // 
+            // gridColumn59
+            // 
+            this.gridColumn59.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn59.DataPropertyName = "BOURate";
+            this.gridColumn59.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn59.HeaderText = "%";
+            this.gridColumn59.Name = "BOURate";
+            this.gridColumn59.Width = 60;
+            // 
+            // gridColumn60
+            // 
+            this.gridColumn60.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn60.DataPropertyName = "YCQTQty";
+            this.gridColumn60.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn60.HeaderText = "量";
+            this.gridColumn60.Name = "YCQTQty";
+            this.gridColumn60.Width = 75;
+            // 
+            // gridColumn61
+            // 
+            this.gridColumn61.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn61.DataPropertyName = "YCQTRate";
+            this.gridColumn61.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn61.HeaderText = "%";
+            this.gridColumn61.Name = "YCQTRate";
+            this.gridColumn61.Width = 60;
+            // 
+            // gridColumn62
+            // 
+            this.gridColumn62.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn62.DataPropertyName = "sumQty3";
+            this.gridColumn62.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn62.HeaderText = "量";
+            this.gridColumn62.Name = "sumQty3";
+            // 
+            // gridColumn63
+            // 
+            this.gridColumn63.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn63.DataPropertyName = "sumRate3";
+            this.gridColumn63.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn63.HeaderText = "%";
+            this.gridColumn63.Name = "sumRate3";
+            this.gridColumn63.Width = 60;
+            // 
+            // gridColumn64
+            // 
+            this.gridColumn64.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn64.DataPropertyName = "QHQty";
+            this.gridColumn64.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn64.HeaderText = "量";
+            this.gridColumn64.Name = "QHQty";
+            this.gridColumn64.Width = 75;
+            // 
+            // gridColumn65
+            // 
+            this.gridColumn65.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn65.DataPropertyName = "QHRate";
+            this.gridColumn65.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn65.HeaderText = "%";
+            this.gridColumn65.Name = "QHRate";
+            this.gridColumn65.Width = 60;
+            // 
+            // gridColumn66
+            // 
+            this.gridColumn66.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn66.DataPropertyName = "GHQTY";
+            this.gridColumn66.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn66.HeaderText = "量";
+            this.gridColumn66.Name = "GHQTY";
+            this.gridColumn66.Width = 75;
+            // 
+            // gridColumn67
+            // 
+            this.gridColumn67.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn67.DataPropertyName = "GHRate";
+            this.gridColumn67.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn67.HeaderText = "%";
+            this.gridColumn67.Name = "GHRate";
+            this.gridColumn67.Width = 60;
+            // 
+            // gridColumn69
+            // 
+            this.gridColumn69.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn69.DataPropertyName = "YPQty";
+            this.gridColumn69.EnableHeaderMarkup = true;
+            this.gridColumn69.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn69.HeaderText = "量";
+            this.gridColumn69.Name = "YPQty";
+            this.gridColumn69.Width = 75;
+            // 
+            // gridColumn70
+            // 
+            this.gridColumn70.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn70.DataPropertyName = "YPRate";
+            this.gridColumn70.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn70.HeaderText = "%";
+            this.gridColumn70.Name = "YPRate";
+            this.gridColumn70.Width = 60;
+            // 
+            // gridColumn71
+            // 
+            this.gridColumn71.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn71.DataPropertyName = "CSQty";
+            this.gridColumn71.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn71.HeaderText = "量";
+            this.gridColumn71.Name = "CSQty";
+            this.gridColumn71.Width = 75;
+            // 
+            // gridColumn72
+            // 
+            this.gridColumn72.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn72.DataPropertyName = "CSRate";
+            this.gridColumn72.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn72.HeaderText = "%";
+            this.gridColumn72.Name = "CSRate";
+            this.gridColumn72.Width = 60;
+            // 
+            // gridColumn73
+            // 
+            this.gridColumn73.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn73.DataPropertyName = "KHQTQty";
+            this.gridColumn73.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn73.HeaderText = "量";
+            this.gridColumn73.Name = "KHQTQty";
+            this.gridColumn73.Width = 75;
+            // 
+            // gridColumn74
+            // 
+            this.gridColumn74.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn74.DataPropertyName = "KHQTRate";
+            this.gridColumn74.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn74.HeaderText = "%";
+            this.gridColumn74.Name = "KHQTRate";
+            this.gridColumn74.Width = 60;
+            // 
+            // gridColumn75
+            // 
+            this.gridColumn75.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn75.DataPropertyName = "sumQty4";
+            this.gridColumn75.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn75.HeaderText = "量";
+            this.gridColumn75.Name = "sumQty4";
+            this.gridColumn75.Width = 75;
+            // 
+            // gridColumn76
+            // 
+            this.gridColumn76.CellStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn76.DataPropertyName = "sumRate4";
+            this.gridColumn76.HeaderStyles.Default.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gridColumn76.HeaderText = "%";
+            this.gridColumn76.Name = "sumRate4";
+            this.gridColumn76.Width = 60;
+            // 
             // frmZLFXB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1627,5 +1652,7 @@
         private DevComponents.DotNetBar.Layout.LayoutGroup layoutGroup1;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput enddate;
         private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn83;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn84;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn85;
     }
 }
