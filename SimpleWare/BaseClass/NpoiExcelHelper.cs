@@ -404,9 +404,9 @@ namespace SimpleWare.BaseClass
                     
                     cell.CellStyle = style;
                     if (i % 2 == 1)
-                        cell.SetCellValue(qtyRate);
-                    else
                         cell.SetCellValue(qtyTitle);
+                    else
+                        cell.SetCellValue(qtyRate);
                     
                 }
             }
