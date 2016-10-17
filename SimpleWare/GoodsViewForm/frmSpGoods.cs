@@ -45,6 +45,8 @@ namespace SimpleWare.GoodsViewForm
         private BindingManagerBase _Bm;
         Boolean isEdit;
         string editGoodID;
+        string usercode = frmLogin.userCode;
+        string username = frmLogin.userName;
         internal BindingManagerBase Bm
         {
             get { return (_Bm); }
@@ -411,16 +413,7 @@ namespace SimpleWare.GoodsViewForm
                         FreshGoods();
                         GridRow gr = (GridRow)superGridControl1.PrimaryGrid.GetRowFromIndex(0);
                         SetControlsValueFromGrid(gr);
-                        //if (ds != null)
-                        //{
-                        //    DataTable table = ds.Tables[0];
-                        //    goodmethod.tb_SpgoodDelete(table.Rows[index]["GoodId"].ToString());
-                        //    table.Rows.RemoveAt(index);
-
-                        //    ds.AcceptChanges();
-
-                        //    //superGridControl1.PrimaryGrid.PurgeDeletedRows(true);
-                        //}
+                        ccLogHelper.Warning(username + " 删除选瓷产品【产品编号:" + id + "器型名称:" + tbgoodname.Text.Trim() + " 花色:" + cmbColor.Text.Trim()  + "】");
 
                         if (Bm.Count == 0)
                         {

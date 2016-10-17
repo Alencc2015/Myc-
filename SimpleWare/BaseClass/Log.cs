@@ -105,22 +105,22 @@ namespace SimpleWare.BaseClass
                 case LogType.Daily:
                     TimeSign = new DateTime(now.Year, now.Month, now.Day);
                     TimeSign = TimeSign.AddDays(1);
-                    format = "SimpleWareyyyyMMdd'.log'";
+                    format = "yyyyMMdd'.log'";
                     break;
                 case LogType.Weekly:
                     TimeSign = new DateTime(now.Year, now.Month, now.Day);
                     TimeSign = TimeSign.AddDays(7);
-                    format = "SimpleWareyyyyMMdd'.log'";
+                    format = "yyyyMMdd'.log'";
                     break;
                 case LogType.Monthly:
                     TimeSign = new DateTime(now.Year, now.Month, 1);
                     TimeSign = TimeSign.AddMonths(1);
-                    format = "SimpleWareyyyyMM'.log'";
+                    format = "yyyyMM'.log'";
                     break;
                 case LogType.Annually:
                     TimeSign = new DateTime(now.Year, 1, 1);
                     TimeSign = TimeSign.AddYears(1);
-                    format = "SimpleWareyyyy'.log'";
+                    format = "yyyy'.log'";
                     break;
             }
             return now.ToString(format);
@@ -135,9 +135,9 @@ namespace SimpleWare.BaseClass
                 {
                     FileOpen();
                     writer.Write(msg.Datetime);
-                    writer.Write('\t');
+                    writer.Write('【');
                     writer.Write(msg.Type);
-                    writer.Write('\t');
+                    writer.Write('】');
                     writer.WriteLine(msg.Text);
                     writer.Flush();
                 }
@@ -150,9 +150,9 @@ namespace SimpleWare.BaseClass
                         FileOpen();
                     }
                     writer.Write(msg.Datetime);
-                    writer.Write('\t');
+                    writer.Write('【');
                     writer.Write(msg.Type);
-                    writer.Write('\t');
+                    writer.Write('】');
                     writer.WriteLine(msg.Text);
                     writer.Flush();
                 }

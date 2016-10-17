@@ -381,7 +381,7 @@ namespace SimpleWare
                             spMethod.SelPorcelainDelete(table.Rows[index]["PlSerialNum"].ToString());
                             table.Rows.RemoveAt(index);
                             ds.AcceptChanges();
-                            LogHelper.Error(username + " 删除选瓷单据【单号:" + table.Rows[index]["PlSerialNum"].ToString() + "器型:" + tbmodelno.Text.Trim() + " 花色:" + tbMaterial.Text.Trim() + " 件数:" + tbpssl.Value + "】");
+                            ccLogHelper.Warning(username + " 删除选瓷单据【单号:" + table.Rows[index]["PlSerialNum"].ToString() + "器型:" + tbmodelno.Text.Trim() + " 花色:" + tbMaterial.Text.Trim() + " 件数:" + tbpssl.Value + "】");
                         }
 
                         if (Bm.Count == 0)
@@ -1068,7 +1068,7 @@ namespace SimpleWare
                 if (spMethod.SelPorcelainDeleteIDs(ids) != 0)
                 {
                     MessageUtil.ShowTips("批量删除成功!");
-                    LogHelper.Error(username + "删除选瓷单据【" + ids + "】");
+                    ccLogHelper.Error(username + "删除选瓷单据【" + ids + "】");
                     FreshSp();
                 }
             }

@@ -40,6 +40,8 @@ namespace SimpleWare
         Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         string path = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None).AppSettings.Settings["picPath"].Value;
         string editGoodId;
+        string usercode = frmLogin.userCode;
+        string username = frmLogin.userName;
         private BindingManagerBase _Bm;
         internal BindingManagerBase Bm
         {
@@ -258,20 +260,7 @@ namespace SimpleWare
                         GridRow gr = (GridRow)superGridControl1.PrimaryGrid.GetRowFromIndex(0);
                         if (gr != null)
                             SetcontrolsValueFromGrid(gr);
-                        //int index = Math.Max(0, Bm.Position);
-                        ////DataSet dataSet =supergrid.PrimaryGrid.DataSource as DataSet;
-
-                        //if (ds != null)
-                        //{
-                        //    DataTable table = ds.Tables[0];
-                        //    goodmethod.tb_goodDelete(table.Rows[index]["GoodId"].ToString());
-                        //    table.Rows.RemoveAt(index);
-
-                        //    ds.AcceptChanges();
-
-                        //    superGridControl1.PrimaryGrid.PurgeDeletedRows(true);
-                        //}
-
+                        ccLogHelper.Warning(username + " 删除产品【产品编号:" + id + " 名称:" + tbgoodsname.Text.Trim() + " 货号:" + tbitemno.Text.Trim() + "器型编号:"+tbmodelno.Text.Trim()+"】");
                         if (Bm.Count == 0)
                         {
                             toolbar1.btndelete.Enabled = false;
