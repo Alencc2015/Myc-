@@ -260,7 +260,7 @@ namespace SimpleWare
                         GridRow gr = (GridRow)superGridControl1.PrimaryGrid.GetRowFromIndex(0);
                         if (gr != null)
                             SetcontrolsValueFromGrid(gr);
-                        ccLogHelper.Warning(username + " 删除产品【产品编号:" + id + " 名称:" + tbgoodsname.Text.Trim() + " 货号:" + tbitemno.Text.Trim() + "器型编号:"+tbmodelno.Text.Trim()+"】");
+                        LogHelper.WriteLog(username + " 删除产品【产品编号:" + id + " 名称:" + tbgoodsname.Text.Trim() + " 货号:" + tbitemno.Text.Trim() + "器型编号:" + tbmodelno.Text.Trim() + "】");
                         if (Bm.Count == 0)
                         {
                             toolbar1.btndelete.Enabled = false;

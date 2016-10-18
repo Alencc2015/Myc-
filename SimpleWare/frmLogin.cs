@@ -138,7 +138,7 @@ namespace SimpleWare
                         //Msg msg = new Msg(DateTime.Now, userName + " " + userCode + " 于 " + ip + " 登录系统", MsgType.Information);
                         //Log log = new Log();
                         //log.Write(DateTime.Now, userName + " " + userCode + " 于 " + ip + " 登录系统", MsgType.Information);
-                        ccLogHelper.Write(userName + " " + userCode + " 于 " + ip + " 登录系统");
+                        LogHelper.WriteLog(userName + " " + userCode + " 于 " + ip + " 登录系统");
 
                     }
                     else

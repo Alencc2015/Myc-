@@ -381,7 +381,7 @@ namespace SimpleWare
                             spMethod.SelPorcelainDelete(table.Rows[index]["PlSerialNum"].ToString());
                             table.Rows.RemoveAt(index);
                             ds.AcceptChanges();
-                            ccLogHelper.Warning(username + " 删除选瓷单据【单号:" + table.Rows[index]["PlSerialNum"].ToString() + "器型:" + tbmodelno.Text.Trim() + " 花色:" + tbMaterial.Text.Trim() + " 件数:" + tbpssl.Value + "】");
+                            LogHelper.WriteLog(username + " 删除选瓷单据【单号:" + table.Rows[index]["PlSerialNum"].ToString() + "器型:" + tbmodelno.Text.Trim() + " 花色:" + tbMaterial.Text.Trim() + " 件数:" + tbpssl.Value + "】");
                         }
 
                         if (Bm.Count == 0)

@@ -41,13 +41,13 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DebugSymbols>true</DebugSymbols>
+    <DebugSymbols>false</DebugSymbols>
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup>
@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClass\AutoSizeFormClass.cs" />
+    <Compile Include="BaseClass\ccLogHelper.cs" />
     <Compile Include="BaseClass\ConvertHelper.cs" />
     <Compile Include="BaseClass\ExcelHelper.cs" />
     <Compile Include="BaseClass\FileDialogHelper.cs" />

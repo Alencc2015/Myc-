@@ -34,6 +34,8 @@ namespace SimpleWare.SelPorcelain
         Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         string path = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None).AppSettings.Settings["picPath"].Value;
         string editColorID;
+        string usercode = frmLogin.userCode;
+        string username = frmLogin.userName;
         private BindingManagerBase _Bm;
         internal BindingManagerBase Bm
         {
@@ -322,6 +324,7 @@ namespace SimpleWare.SelPorcelain
                         string id = tbColorNo.Text.Trim();
                         if (!string.IsNullOrEmpty(id))
                             goodmethod.tb_ColorDelete(id);
+                        LogHelper.WriteLog(username + " 删除花色【编号:" + id + " 名称:" + tbColorName.Text.Trim() +  "】");
                         FreshModels();
                         GridRow gr = (GridRow)superGridControl1.PrimaryGrid.GetRowFromIndex(0);
                         if (gr != null)

@@ -308,7 +308,7 @@ namespace SimpleWare.SelPorcelain
                         string id = tbModelNo.Text.Trim();
                         if(!string.IsNullOrEmpty(id))
                             goodmethod.tb_ModelDelete(id);
-                        ccLogHelper.Warning(username + " 删除器型【编号:" + id + " 名称:" + tbModelName.Text.Trim() + "】");
+                        LogHelper.WriteLog(username + " 删除器型【编号:" + id + " 名称:" + tbModelName.Text.Trim() + "】");
                         FreshModels();
                         GridRow gr = (GridRow)superGridControl1.PrimaryGrid.GetRowFromIndex(0);
                         SetControlsValueFromGrid(gr);

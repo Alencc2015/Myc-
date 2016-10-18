@@ -413,7 +413,7 @@ namespace SimpleWare.GoodsViewForm
                         FreshGoods();
                         GridRow gr = (GridRow)superGridControl1.PrimaryGrid.GetRowFromIndex(0);
                         SetControlsValueFromGrid(gr);
-                        ccLogHelper.Warning(username + " 删除选瓷产品【产品编号:" + id + "器型名称:" + tbgoodname.Text.Trim() + " 花色:" + cmbColor.Text.Trim()  + "】");
+                        LogHelper.WriteLog(username + " 删除选瓷产品【产品编号:" + id + "器型名称:" + tbgoodname.Text.Trim() + " 花色:" + cmbColor.Text.Trim()  + "】");
 
                         if (Bm.Count == 0)
                         {

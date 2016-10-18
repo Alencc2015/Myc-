@@ -15,6 +15,9 @@ using SimpleWare.GoodsViewForm;
 using SimpleWare.SelPorcelain;
 using SimpleWare.SelPorcelainForms;
 using SimpleWare.Menu;
+using System.Net;
+using System.Xml;
+using SimpleWare.BaseClass;
 namespace SimpleWare
 {
     public partial class frmMain : Office2007Form
@@ -80,6 +83,7 @@ namespace SimpleWare
             tsslLoginUser.Text = "当前用户：" + " " + frmLogin.userName;
             //tsslLoginUser.Width = 1 / 4 * statusStrip1.Width;
             timer1.Enabled = true;
+            timer2.Enabled = true;
             this.WindowState = FormWindowState.Maximized;
             setBtnVisible();
         }
@@ -441,6 +445,43 @@ namespace SimpleWare
         private void buttonItem35_Click(object sender, EventArgs e)
         {
             SetMdiForm("用户组管理", typeof(frmUserGroups));
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            //检查更新
+            AutoUpdate.AutoUpdate au = new AutoUpdate.AutoUpdate();
+            try
+            {
+                if (au != null)
+                {
+                    MessageBox.Show("发现新版本，点击确定按钮更新为最新程序!", "自动更新", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //this.Close();
+                    au.Update();
+                }
+                
+            }
+            catch (WebException exp)
+            {
+                MessageBox.Show(String.Format("无法找到指定资源\n\n{0}", exp.Message), "自动升级", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (XmlException exp)
+            {
+                MessageBox.Show(String.Format("下载的升级文件有错误\n\n{0}", exp.Message), "自动升级", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (NotSupportedException exp)
+            {
+                MessageBox.Show(String.Format("升级地址配置错误\n\n{0}", exp.Message), "自动升级", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException exp)
+            {
+                MessageBox.Show(String.Format("下载的升级文件有错误\n\n{0}", exp.Message), "自动升级", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(String.Format("升级过程中发生错误\n\n{0}", exp.Message), "自动升级", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LogHelper.Error(String.Format("升级过程中发生错误\n\n{0}", exp.Message));
+            }
         }
     }
 }
